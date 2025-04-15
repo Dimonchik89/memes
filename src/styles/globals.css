@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media only screen and (max-width: 760px), (max-device-width: 1024px) {
+	table,
+	thead,
+	tbody,
+	th,
+	td,
+	tr {
+		display: block;
+	}
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr {
+		margin: 0 0 1rem 0;
+	}
+
+	tr:nth-child(odd) {
+		background: #7e99a3;
+	}
+
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	td span {
+		padding-left: 10%;
+		width: 100%;
+		min-width: 250px;
+		height: 18px;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		margin: 0 5px 0 5px;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	td:before {
+		top: 0;
+		left: 6px;
+		width: 10%;
+		padding-right: 10px;
+		white-space: nowrap;
+		opacity: 1 !important;
+		position: relative !important;
+		background-color: inherit !important;
+	}
+
+	td:nth-of-type(1):before {
+		content: 'ID' !important ;
+	}
+	td:nth-of-type(2):before {
+		content: 'Title';
+	}
+	td:nth-of-type(3):before {
+		content: 'URL';
+	}
+	td:nth-of-type(4):before {
+		content: 'Likes';
+	}
+	td:nth-of-type(5):before {
+		content: 'Actions';
+	}
+}
